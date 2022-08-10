@@ -42,7 +42,6 @@ class TransactionList extends StatelessWidget {
                     horizontal: 5,
                   ),
                   child: ListTile(
-                    
                     leading: CircleAvatar(
                       backgroundColor: Colors.deepPurple[400],
                       radius: 30,
