@@ -102,12 +102,6 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         centerTitle: true,
         title: const Text('Despesas Pessoais'),
-        actions: [
-          IconButton(
-            icon: const Icon(Icons.add),
-            onPressed: () => _openTransactionFormModal(context),
-          ),
-        ],
       ),
       body: SingleChildScrollView(
         child: SizedBox(
