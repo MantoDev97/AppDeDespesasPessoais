@@ -100,6 +100,11 @@ class _MyHomePageState extends State<MyHomePage> {
 
     return Scaffold(
       appBar: AppBar(
+        shape: const RoundedRectangleBorder(
+          borderRadius: BorderRadius.vertical(
+            bottom: Radius.circular(25),
+          ),
+        ),
         centerTitle: true,
         title: const Text('Despesas Pessoais'),
       ),
