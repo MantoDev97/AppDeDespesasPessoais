@@ -115,7 +115,14 @@ class _MyHomePageState extends State<MyHomePage> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
+              //Chat
               Chart(_recentTransactions),
+
+              //total gasto na semana
+              //  Text('Total gasto: ${_recentTransactions}'),
+
+
+              //lista de despesas.
               TransactionList(_transactions, _removeTransaction),
             ],
           ),

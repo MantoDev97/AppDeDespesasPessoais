@@ -36,6 +36,9 @@ class TransactionList extends StatelessWidget {
               itemBuilder: (ctx, index) {
                 final tr = transactions[index];
                 return Card(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(25),
+                  ),
                   elevation: 5,
                   margin: const EdgeInsets.symmetric(
                     vertical: 8,
@@ -43,7 +46,7 @@ class TransactionList extends StatelessWidget {
                   ),
                   child: ListTile(
                     leading: CircleAvatar(
-                      backgroundColor: Colors.deepPurple[400],
+                      backgroundColor: Colors.green[600],
                       radius: 30,
                       child: Padding(
                         padding: const EdgeInsets.all(6),

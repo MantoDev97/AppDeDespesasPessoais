@@ -42,6 +42,9 @@ class Chart extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(25),
+      ),
       elevation: 3,
       margin: const EdgeInsets.all(15),
       child: Padding(
