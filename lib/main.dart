@@ -110,22 +110,39 @@ class _MyHomePageState extends State<MyHomePage> {
         title: const Text('Despesas Pessoais'),
       ),
       body: SingleChildScrollView(
-        child: SizedBox(
-          height: size.height,
-          width: size.width,
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: [
-              //Chat
-              Chart(_recentTransactions),
+        child: Padding(
+          padding: const EdgeInsets.all(10),
+          child: SizedBox(
+            height: size.height,
+            width: size.width,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                //Chat
+                Chart(_recentTransactions),
 
-              //total gasto na semana
-              //  Text('Total gasto: ${_recentTransactions}'),
+                //total gasto na semana
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(0, 10, 0, 0),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children:const [
+                       Text(
+                        'Contas pagas',
+                        style: TextStyle(
+                          color: Colors.deepPurple,
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
 
-
-              //lista de despesas.
-              TransactionList(_transactions, _removeTransaction),
-            ],
+                //lista de despesas.
+                TransactionList(_transactions, _removeTransaction),
+              ],
+            ),
           ),
         ),
       ),

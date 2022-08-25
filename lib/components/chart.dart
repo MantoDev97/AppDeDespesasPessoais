@@ -33,11 +33,14 @@ class Chart extends StatelessWidget {
     }).reversed.toList();
   }
 
+  
+
   double get _weekTotalValue {
     return groupedTransactions.fold(0.0, (sum, tr) {
       return sum + (tr['value'] as double);
     });
   }
+  
 
   @override
   Widget build(BuildContext context) {
@@ -46,7 +49,7 @@ class Chart extends StatelessWidget {
         borderRadius: BorderRadius.circular(25),
       ),
       elevation: 3,
-      margin: const EdgeInsets.all(15),
+      margin: const EdgeInsets.all(10),
       child: Padding(
         padding: const EdgeInsets.all(10),
         child: Row(
